@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UIElements;
@@ -39,8 +40,8 @@ public class Dice : MonoBehaviour
         {
             isbord = true;
             DiceSound.Play(); //재생
-            Invoke("countDice", 2f);
-            Invoke("delectDice", 3f);
+            Invoke("countDice", 3.2f);
+            Invoke("delectDice", 4.5f);
         }
     }
 
@@ -107,15 +108,21 @@ public class Dice : MonoBehaviour
         {
             diceManager.DiceNumber01 = diceManager.dicecount[0];
             diceManager.DiceNumber02 = diceManager.dicecount[1];
+            diceManager.DiceSumNumber = diceManager.DiceNumber01 + diceManager.DiceNumber02;
+            
+            // UI
+            diceManager.DiceCountUI.gameObject.SetActive(true);
+            diceManager.DiceCountText.text = $"{diceManager.DiceSumNumber}";
 
             Debug.Log($"첫번째 주사위의 수: " + diceManager.dicecount[0]);
             Debug.Log($"두번째 주사위의 수: " + diceManager.dicecount[1]);
-            Debug.Log($"두 주사위의 합의 수: {diceManager.DiceNumber01 + diceManager.DiceNumber02}");
+            Debug.Log($"두 주사위의 합의 수: {diceManager.DiceSumNumber}");
         }
     }
 
     void delectDice()
     {
+        diceManager.DiceCountUI.gameObject.SetActive(false);
         Destroy(gameObject);
     }
  }
