@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d014bace4717a408af98a10c540203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotatespeed: 10
+  rotatespeed: 5
   DiceSound: {fileID: 4113652911890893777}
 --- !u!82 &4113652911890893777
 AudioSource:

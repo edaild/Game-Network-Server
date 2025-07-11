@@ -391,7 +391,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 0.001345655, g: 0.0058752922, b: 0.23773581, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1523,6 +1523,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DicePrifab: {fileID: 2705813271889790440, guid: bbd5c7c95ae0cdd40b3436885a814b22, type: 3}
   DicePoint: {fileID: 341449186}
+  DiceNumber01: 0
+  DiceNumber02: 0
+  dicecount: 0000000000000000
 --- !u!4 &1401282219
 Transform:
   m_ObjectHideFlags: 0
